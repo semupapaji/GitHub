@@ -1,9 +1,14 @@
 {
-"builds": [
-{ "src": "index.py", "use": "@vercel/python" }
-],
-"routes": [
-{ "src": "/(.*)", "dest": "index.py" }
-],
-"regions": ["bom1"]
+  "builds": [
+    {
+      "src": "app.py",           // 👈 Your main Python file
+      "use": "@vercel/python"    // 👈 Vercel's Python runtime
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",            // 👈 Match ALL URLs
+      "dest": "app.py"           // 👈 Send to app.py
+    }
+  ]
 }
